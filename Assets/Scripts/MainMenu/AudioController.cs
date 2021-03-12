@@ -26,4 +26,15 @@ public class AudioController : MonoBehaviour
 
         myAudio.Play();
     }
+
+    public void setVolume(float volume)
+    {
+        float volumeToSet  = volume / 100f;
+
+        if (volume == 0)
+        {
+            volumeToSet = 0;
+        }
+        myAudio.volume = volumeToSet;
+    }
 }
