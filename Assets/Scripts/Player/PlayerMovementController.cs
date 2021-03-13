@@ -3,6 +3,9 @@ using Mirror;
 
 public class PlayerMovementController : NetworkBehaviour
 {
+    [Header("Required")]
+    public Animator animator;
+
     [SerializeField] private float movementSpeed = 5f;
     [SerializeField] private CharacterController controller = null;
 
@@ -40,13 +43,41 @@ public class PlayerMovementController : NetworkBehaviour
     [Client]
     private void Move()
     {
+        CheckAnimationToSend();
+
         Vector3 right = controller.transform.right;
         Vector3 forward = controller.transform.forward;
         right.y = 0f;
         forward.y = 0f;
 
         Vector3 movement = right.normalized * previousInput.x + forward.normalized * previousInput.y;
-
         controller.Move(movement * movementSpeed * Time.deltaTime);
+    }
+
+    private void CheckAnimationToSend()
+    {
+        bool isMoving = false;
+        if (Input.GetKey(KeyCode.W))
+        {
+            animator.SetFloat("forward", 1f);
+            isMoving = true;
+        }
+        else if (Input.GetKey(KeyCode.A))
+        {
+            animator.SetFloat("left", 1f);
+            isMoving = true;
+        }
+        else if (Input.GetKey(KeyCode.D))
+        {
+            animator.SetFloat("right", 1f);
+            isMoving = true;
+        }
+
+        if (isMoving == false)
+        {
+            animator.SetFloat("forward", 0f);
+            animator.SetFloat("left", 0f);
+            animator.SetFloat("right", 0f);
+        }
     }
 }
