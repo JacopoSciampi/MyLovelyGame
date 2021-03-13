@@ -6,11 +6,12 @@ public class PlayerMovementController : NetworkBehaviour
     [Header("Required")]
     public Animator animator;
 
-    [SerializeField] private float movementSpeed = 5f;
+    [SerializeField] private float movementSpeed;
     [SerializeField] private CharacterController controller = null;
 
     private Vector2 previousInput;
     private Controls controls;
+    private bool running;
     private Controls Controls
     {
         get
@@ -45,6 +46,8 @@ public class PlayerMovementController : NetworkBehaviour
     {
         CheckAnimationToSend();
 
+        movementSpeed = (running) ? 8f : 5f;
+
         Vector3 right = controller.transform.right;
         Vector3 forward = controller.transform.forward;
         right.y = 0f;
@@ -56,28 +59,59 @@ public class PlayerMovementController : NetworkBehaviour
 
     private void CheckAnimationToSend()
     {
-        bool isMoving = false;
+        running = Input.GetKey(KeyCode.LeftShift);
+        animator.SetBool("running", running);
+
         if (Input.GetKey(KeyCode.W))
         {
-            animator.SetFloat("forward", 1f);
-            isMoving = true;
+            if (running)
+            {
+                animator.SetFloat("forward", 1f);
+                animator.SetFloat("left", 0f);
+                animator.SetFloat("right", 0f);
+                animator.SetFloat("backward", 0f);
+                animator.SetBool("moving", false);
+            }
+            else
+            {
+                animator.SetFloat("forward", 1f);
+                animator.SetFloat("left", 0f);
+                animator.SetFloat("right", 0f);
+                animator.SetFloat("backward", 0f);
+                animator.SetBool("moving", true);
+            }
         }
         else if (Input.GetKey(KeyCode.A))
         {
             animator.SetFloat("left", 1f);
-            isMoving = true;
+            animator.SetFloat("forward", 0f);
+            animator.SetFloat("right", 0f);
+            animator.SetFloat("backward", 0f);
+            animator.SetBool("moving", true);
         }
         else if (Input.GetKey(KeyCode.D))
         {
             animator.SetFloat("right", 1f);
-            isMoving = true;
+            animator.SetFloat("forward", 0f);
+            animator.SetFloat("left", 0f);
+            animator.SetFloat("backward", 0f);
+            animator.SetBool("moving", true);
         }
-
-        if (isMoving == false)
+        else if (Input.GetKey(KeyCode.S))
+        {
+            animator.SetFloat("backward", 1f);
+            animator.SetFloat("forward", 0f);
+            animator.SetFloat("left", 0f);
+            animator.SetFloat("right", 0f);
+            animator.SetBool("moving", true);
+        }
+        else
         {
             animator.SetFloat("forward", 0f);
             animator.SetFloat("left", 0f);
             animator.SetFloat("right", 0f);
+            animator.SetFloat("backward", 0f);
+            animator.SetBool("moving", false);
         }
     }
 }
