@@ -10,7 +10,7 @@ public class RayCastController : MonoBehaviour
         Ray ray = new Ray(this.transform.position, this.transform.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, 50))
+        if (Physics.Raycast(ray, out hit, 2))
         {
             if (WorldManager.isTooltipActive == false)
             {
