@@ -12,6 +12,7 @@ public class PlayerMovementController : NetworkBehaviour
     private Vector2 previousInput;
     private Controls controls;
     private bool running;
+    private bool isMovingBackward;
     private Controls Controls
     {
         get
@@ -44,9 +45,10 @@ public class PlayerMovementController : NetworkBehaviour
     [Client]
     private void Move()
     {
-        CheckAnimationToSend();
+        CheckMovementAnimationToSend();
+        CheckAttackAnimationToSend();
 
-        movementSpeed = (running) ? 8f : 5f;
+        movementSpeed = (running) ? (isMovingBackward) ? 5f : 8f : 5f;
 
         Vector3 right = controller.transform.right;
         Vector3 forward = controller.transform.forward;
@@ -57,10 +59,22 @@ public class PlayerMovementController : NetworkBehaviour
         controller.Move(movement * movementSpeed * Time.deltaTime);
     }
 
-    private void CheckAnimationToSend()
+    private void CheckAttackAnimationToSend()
+    {
+        if(Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            animator.SetBool("mouseClicked", true);
+        } else
+        {
+            animator.SetBool("mouseClicked", false);
+        }
+    }
+
+    private void CheckMovementAnimationToSend()
     {
         running = Input.GetKey(KeyCode.LeftShift);
         animator.SetBool("running", running);
+        isMovingBackward = false;
 
         if (Input.GetKey(KeyCode.W))
         {
@@ -99,6 +113,8 @@ public class PlayerMovementController : NetworkBehaviour
         }
         else if (Input.GetKey(KeyCode.S))
         {
+            isMovingBackward = true;
+
             animator.SetFloat("backward", 1f);
             animator.SetFloat("forward", 0f);
             animator.SetFloat("left", 0f);

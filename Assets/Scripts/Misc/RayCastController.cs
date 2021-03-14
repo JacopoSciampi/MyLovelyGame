@@ -2,7 +2,7 @@
 
 public class RayCastController : MonoBehaviour
 {
-    public Vector3 collision = Vector3.zero;
+    [Header("Required")]
     public LayerMask layer;
 
     void Update()
@@ -16,7 +16,7 @@ public class RayCastController : MonoBehaviour
             {
                 ItemRaycastableController item = hit.transform.gameObject.GetComponent<ItemRaycastableController>();
 
-                if (item.showInteractTooltip)
+                if (item != null && item.showInteractTooltip)
                 {
                     WorldManager.setTooltip(item.tooltipText);
                 }

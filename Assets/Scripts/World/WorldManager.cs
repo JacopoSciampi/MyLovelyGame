@@ -8,6 +8,7 @@ public static class WorldManager
     private static Image tooltipImage;
 
     public static bool isTooltipActive;
+    public static bool hasValidItemInHand;
 
     public static void setTooltip(string message)
     {
