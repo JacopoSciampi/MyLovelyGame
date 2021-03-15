@@ -1,5 +1,4 @@
-# MyLovelyGame
-### Yep, I need a name.
+# Ethel Land
 
 MD wip.
 
