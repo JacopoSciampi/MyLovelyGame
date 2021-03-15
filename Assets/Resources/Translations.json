@@ -1,64 +1,58 @@
 {
-	"common": {
-		"slogan": {
-			"en": "Rise from the void and try to survive!",
-			"it": "Rinasci dall'oscurità e prova a sopravvivere!",
-			"fr": "",
-			"es": "",
-			"de": ""
-		}
-	},
-	"mainMenu": {
-		"startGame": {
-			"en": "Start game",
-			"it": "Inizia",
-			"fr": "",
-			"es": "",
-			"de": ""
-		},
-		"options": {
-			"en": "Options",
-			"it": "Opzioni",
-			"fr": "",
-			"es": "",
-			"de": ""
-		},
-		"quit": {
-			"en": "Quit",
-			"it": "Esci",
-			"fr": "",
-			"es": "",
-			"de": ""
-		},
-		"audio": {
-			"en": "Audio",
-			"it": "Audio",
-			"fr": "",
-			"es": "",
-			"de": ""
-		},
-		"music": {
-			"en": "Music",
-			"it": "Musica",
-			"fr": "",
-			"es": "",
-			"de": ""
-		},
-		"back": {
-			"en": "Back",
-			"it": "Indietro",
-			"fr": "",
-			"es": "",
-			"de": ""
-		}
+	"slogan": {
+		"en": "Rise from the void and try to survive!",
+		"it": "Rinasci dall'oscurita' e prova a sopravvivere!",
+		"fr": "",
+		"es": "",
+		"de": ""
 	},
 	"startGame": {
-		"HINT_no_pg_at_start": {
-			"en": "You need a character in order to play ",
-			"it": "Hai bisogno di un personaggio per giocare",
-			"fr": "",
-			"es": "",
-			"de": ""
-		},
+		"en": "Start game",
+		"it": "Inizia",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"options": {
+		"en": "Options",
+		"it": "Opzioni",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"quit": {
+		"en": "Quit",
+		"it": "Esci",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"audio": {
+		"en": "Audio",
+		"it": "Audio",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"music": {
+		"en": "Music",
+		"it": "Musica",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"back": {
+		"en": "Back",
+		"it": "Indietro",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"HINT_no_pg_at_start": {
+		"en": "You need a character in order to play ",
+		"it": "Hai bisogno di un personaggio per giocare",
+		"fr": "",
+		"es": "",
+		"de": ""
 	}
 }

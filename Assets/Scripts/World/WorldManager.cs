@@ -1,9 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 
 public static class WorldManager
 {
+    private class TranslationDictionary
+    {
+        public string it { set; get; }
+        public string en { set; get; }
+    }
+
     private static TextMeshProUGUI tooltipText;
     private static Image tooltipImage;
 
@@ -14,11 +23,56 @@ public static class WorldManager
     public static Color successColor;
     public static Color hintColor;
 
+    public static string language;
+
+    private static Dictionary<string, TranslationDictionary> translations;
+    private static bool hasBeenInit;
+
     public static void __INIT__()
     {
-        errorColor = new Color(224, 57, 0);
-        successColor = new Color(255, 228, 122);
-        hintColor = new Color(24, 224, 0);
+        if (!hasBeenInit)
+        {
+            hasBeenInit = true;
+
+            hintColor = new Color(24, 224, 0);
+            errorColor = new Color(224, 57, 0);
+            successColor = new Color(255, 228, 122);
+
+            if (language == null)
+            {
+                language = "it";
+            }
+
+            _initTranslations();
+        }
+    }
+
+    public static string GetTranslation(string key)
+    {
+        TranslationDictionary qualcosa;
+        if (translations.TryGetValue(key, out qualcosa))
+        {
+            if (language == "en")
+            {
+                return qualcosa.en;
+            }
+            else if (language == "it")
+            {
+                return qualcosa.it;
+            }
+        }
+
+        return key;
+    }
+
+    private static void _initTranslations()
+    {
+        JsonReader jsonReader = new GameObject().AddComponent<JsonReader>();
+
+        jsonReader.text = (Resources.Load("Translations") as TextAsset);
+
+        translations = JsonConvert.DeserializeObject<Dictionary<string, TranslationDictionary>>(jsonReader.text.ToString());
+        Object.Destroy(jsonReader);
     }
 
     public static void setTooltip(string message)
