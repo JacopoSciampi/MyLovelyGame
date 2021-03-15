@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 36c3e976d1a72aa4fa0049d638ecabf6
+guid: 4f2b79e4b36e4364780875663f7e1c49
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -8,9 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Arcadepix
+  fontName: Umbrage
   fontNames:
-  - Arcadepix
+  - Umbrage
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

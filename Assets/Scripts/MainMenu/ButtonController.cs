@@ -26,7 +26,7 @@ public class ButtonController : MonoBehaviour, IPointerEnterHandler, IPointerExi
             myAudio.Play();
         }
 
-        Cursor.SetCursor(clickMouseTexture, new Vector2(10,10), CursorMode.ForceSoftware);
+        Cursor.SetCursor(clickMouseTexture, Vector2.zero, CursorMode.ForceSoftware);
         if (activeImage.enabled == false)
         {
             activeImage.enabled = true;
