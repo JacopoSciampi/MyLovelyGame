@@ -6,11 +6,13 @@ public class MainMenuGameController : MonoBehaviour
     [Header("Required")]
     public Button Backbutton;
     public AudioController audioController;
+    public Texture2D defaultCursor;
 
     [Header("RequiredComponents")]
     public Slider musicVolumeSlider;
 
     private SaveOptionsData toSave;
+
 
     private void Start()
     {
