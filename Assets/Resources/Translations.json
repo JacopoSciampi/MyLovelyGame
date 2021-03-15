@@ -2,57 +2,57 @@
 	"slogan": {
 		"en": "Rise from the void and try to survive!",
 		"it": "Rinasci dall'oscurita' e prova a sopravvivere!",
-		"fr": "",
-		"es": "",
+		"fr": "Ressuscitez des obscurités et tentez de survivre!",
+		"es": "¡Renace de la oscuridad e intenta sobrevivir!",
 		"de": ""
 	},
 	"startGame": {
 		"en": "Start game",
 		"it": "Inizia",
-		"fr": "",
-		"es": "",
+		"fr": "Lancer",
+		"es": "Empieza",
 		"de": ""
 	},
 	"options": {
 		"en": "Options",
 		"it": "Opzioni",
-		"fr": "",
-		"es": "",
+		"fr": "Options",
+		"es": "Opciones",
 		"de": ""
 	},
 	"quit": {
 		"en": "Quit",
 		"it": "Esci",
-		"fr": "",
-		"es": "",
+		"fr": "Quitter",
+		"es": "Salir",
 		"de": ""
 	},
 	"audio": {
 		"en": "Audio",
 		"it": "Audio",
-		"fr": "",
-		"es": "",
+		"fr": "Audio",
+		"es": "Audio",
 		"de": ""
 	},
 	"music": {
 		"en": "Music",
 		"it": "Musica",
-		"fr": "",
-		"es": "",
+		"fr": "Musique",
+		"es": "Música",
 		"de": ""
 	},
 	"back": {
 		"en": "Back",
 		"it": "Indietro",
-		"fr": "",
-		"es": "",
+		"fr": "Retour(?)",
+		"es": "Atrás",
 		"de": ""
 	},
 	"HINT_no_pg_at_start": {
 		"en": "You need a character in order to play ",
 		"it": "Hai bisogno di un personaggio per giocare",
-		"fr": "",
-		"es": "",
+		"fr": "Vous avez besoin d'un personnage pour jouer",
+		"es": "Necistas un personaje para jugar",
 		"de": ""
 	}
 }
