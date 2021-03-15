@@ -10,6 +10,17 @@ public static class WorldManager
     public static bool isTooltipActive;
     public static bool hasValidItemInHand;
 
+    public static Color errorColor;
+    public static Color successColor;
+    public static Color hintColor;
+
+    public static void __INIT__()
+    {
+        errorColor = new Color(224, 57, 0);
+        successColor = new Color(255, 228, 122);
+        hintColor = new Color(24, 224, 0);
+    }
+
     public static void setTooltip(string message)
     {
         if (tooltipImage == null || tooltipText == null)

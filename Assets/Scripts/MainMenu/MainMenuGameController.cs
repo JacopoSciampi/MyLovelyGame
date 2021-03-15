@@ -14,6 +14,10 @@ public class MainMenuGameController : MonoBehaviour
 
     private SaveOptionsData toSave;
 
+    private void Awake()
+    {
+        WorldManager.__INIT__();
+    }
 
     private void Start()
     {
