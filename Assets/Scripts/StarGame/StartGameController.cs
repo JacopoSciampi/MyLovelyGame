@@ -16,6 +16,8 @@ public class StartGameController : MonoBehaviour
 
     private void Awake()
     {
+        WorldManager.__INIT__();
+
         basePath = Application.persistentDataPath;
         Cursor.SetCursor(defaultCursor, Vector2.zero, CursorMode.ForceSoftware);
         _upsertNeededDirectories();
@@ -36,7 +38,7 @@ public class StartGameController : MonoBehaviour
         else
         {
             footerMessageText.color = WorldManager.hintColor;
-            footerMessageText.text = "You need to create a character in order to play";
+            footerMessageText.text = WorldManager.GetTranslation("HINT_no_pg_at_start");
         }
     }
 

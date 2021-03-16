@@ -1,0 +1,174 @@
+fileFormatVersion: 2
+guid: 6e3466a797e263547b0fa095de892004
+ModelImporter:
+  serializedVersion: 22
+  fileIDToRecycleName:
+    100000: Arm.L
+    100002: Arm.R
+    100004: Armature_Male
+    100006: Chest
+    100008: Foot.L
+    100010: Foot.L_end
+    100012: Foot.R
+    100014: Foot.R_end
+    100016: ForeArm.L
+    100018: ForeArm.R
+    100020: Hand.L
+    100022: Hand.L_end
+    100024: Hand.R
+    100026: Hand.R_end
+    100028: Head
+    100030: Head_end
+    100032: HealerRag
+    100034: Healerrag_bottom
+    100036: HealerRag_hat
+    100038: Hip
+    100040: Leg.L
+    100042: Leg.R
+    100044: Male_Feet
+    100046: //RootNode
+    100048: Neck
+    100050: Shoulder.L
+    100052: Shoulder.R
+    100054: Spine
+    100056: Thigh.L
+    100058: Thigh.R
+    100060: HealerRobes_Boots
+    100062: Mesh_HealerRag_F
+    100064: Mesh_HealerRag_M
+    400000: Arm.L
+    400002: Arm.R
+    400004: Armature_Male
+    400006: Chest
+    400008: Foot.L
+    400010: Foot.L_end
+    400012: Foot.R
+    400014: Foot.R_end
+    400016: ForeArm.L
+    400018: ForeArm.R
+    400020: Hand.L
+    400022: Hand.L_end
+    400024: Hand.R
+    400026: Hand.R_end
+    400028: Head
+    400030: Head_end
+    400032: HealerRag
+    400034: Healerrag_bottom
+    400036: HealerRag_hat
+    400038: Hip
+    400040: Leg.L
+    400042: Leg.R
+    400044: Male_Feet
+    400046: //RootNode
+    400048: Neck
+    400050: Shoulder.L
+    400052: Shoulder.R
+    400054: Spine
+    400056: Thigh.L
+    400058: Thigh.R
+    400060: HealerRobes_Boots
+    400062: Mesh_HealerRag_F
+    400064: Mesh_HealerRag_M
+    2100000: Palette
+    2100002: Skin.002
+    2100004: Palette.001
+    2100006: Black.002
+    2100008: Mouth.002
+    2100010: Eye.002
+    2100012: tex.003
+    2300000: Male_Feet
+    3300000: Male_Feet
+    4300000: HealerRag_hat
+    4300002: Healerrag_bottom
+    4300004: HealerRag
+    4300006: Male_Feet
+    4300008: Mesh_HealerRag_F
+    4300010: Mesh_HealerRag_M
+    4300012: HealerRobes_Boots
+    9500000: //RootNode
+    13700000: HealerRag
+    13700002: Healerrag_bottom
+    13700004: HealerRag_hat
+    13700006: HealerRobes_Boots
+    13700008: Mesh_HealerRag_F
+    13700010: Mesh_HealerRag_M
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 95
+    normalImportMode: 1
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

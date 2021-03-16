@@ -26,6 +26,7 @@ public static class WorldManager
     public static string language;
 
     private static Dictionary<string, TranslationDictionary> translations;
+    public static List<string> classListDropdownData;
     private static bool hasBeenInit;
 
     public static void __INIT__()
@@ -33,22 +34,32 @@ public static class WorldManager
         if (!hasBeenInit)
         {
             hasBeenInit = true;
-
-            hintColor = new Color(24, 224, 0);
-            errorColor = new Color(224, 57, 0);
-            successColor = new Color(255, 228, 122);
-
+            _initTranslations();
             if (language == null)
             {
                 language = "it";
             }
 
-            _initTranslations();
+            classListDropdownData = new List<string> () { 
+                GetTranslation("class_mage"),
+                GetTranslation("class_paladin"),
+                GetTranslation("class_assassin"),
+                GetTranslation("class_necromancer"),
+            };
+
+            hintColor = new Color(24, 224, 0);
+            errorColor = new Color(224, 57, 0);
+            successColor = new Color(255, 228, 122);
         }
     }
 
     public static string GetTranslation(string key)
     {
+        if(translations == null)
+        {
+            _initTranslations();
+        }
+
         TranslationDictionary qualcosa;
         if (translations.TryGetValue(key, out qualcosa))
         {
