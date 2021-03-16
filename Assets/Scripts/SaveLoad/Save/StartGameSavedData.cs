@@ -1,13 +1,18 @@
 ﻿[System.Serializable]
 public class StartGameSavedData
 {
-    public string defaultCharacterName { get; set; }
+    public string name { get; set; }
+    public int classId { get; set; }
+    public string className { get; set; }
+
 
     public StartGameSavedData(StartGameSavedData data)
     {
         if (data != null)
         {
-            defaultCharacterName = data.defaultCharacterName;
+            name = data.name;
+            classId = data.classId;
+            className = data.className;
         }
     }
 }

@@ -8,11 +8,10 @@ public class StartGameController : MonoBehaviour
     [Header("Required")]
     public Texture2D defaultCursor;
     public TextMeshProUGUI characterNameText;
+    public TextMeshProUGUI characterClassText;
     public TextMeshProUGUI footerMessageText;
 
     private string basePath;
-
-    
 
     private void Awake()
     {
@@ -44,18 +43,8 @@ public class StartGameController : MonoBehaviour
 
     private void _setupUiByData(StartGameSavedData data)
     {
-        characterNameText.text = data.defaultCharacterName;
-    }
-
-    private void _createConfigFile(string path)
-    {
-        BinaryFormatter formatter = new BinaryFormatter();
-        FileStream stream = new FileStream(path, FileMode.Create);
-
-        StartGameSavedData dataToSave = new StartGameSavedData(null);
-
-        formatter.Serialize(stream, dataToSave);
-        stream.Close();
+        characterNameText.text = data.name;
+        characterClassText.text = WorldManager.GetTranslation(data.className);
     }
 
     private void _upsertNeededDirectories()

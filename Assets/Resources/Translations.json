@@ -187,5 +187,12 @@
 		"fr": "",
 		"es": "",
 		"de": ""
+	},
+	"invalid_name": {
+		"en": "Invalid name",
+		"it": "Nome non valido",
+		"fr": "",
+		"es": "",
+		"de": ""
 	}
 }

@@ -10,6 +10,7 @@ public class StartGameTranslationsController : MonoBehaviour
     [Header("**Required Character Info**")]
     public TextMeshProUGUI characterInfoText;
     public TextMeshProUGUI c_name;
+    public TextMeshProUGUI c_class;
 
     [Header("**Required ServerList Info**")]
     public TextMeshProUGUI serverListText;
@@ -32,7 +33,7 @@ public class StartGameTranslationsController : MonoBehaviour
         DropdownClassList.options.Clear();
         foreach (string className in WorldManager.classListDropdownData)
         {
-            DropdownClassList.options.Add(new TMP_Dropdown.OptionData() { text = className });
+            DropdownClassList.options.Add(new TMP_Dropdown.OptionData() { text = WorldManager.GetTranslation(className) });
         }
     }
     private void Start()
@@ -46,6 +47,7 @@ public class StartGameTranslationsController : MonoBehaviour
         /** CHARACTER INFO **/
         characterInfoText.text = WorldManager.GetTranslation("character_info");
         c_name.text = WorldManager.GetTranslation("name");
+        c_class.text = WorldManager.GetTranslation("class");
 
         /** SERVER LIST INFO **/
         serverListText.text = WorldManager.GetTranslation("server_list");

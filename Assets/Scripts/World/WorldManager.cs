@@ -40,11 +40,11 @@ public static class WorldManager
                 language = "it";
             }
 
-            classListDropdownData = new List<string> () { 
-                GetTranslation("class_mage"),
-                GetTranslation("class_paladin"),
-                GetTranslation("class_assassin"),
-                GetTranslation("class_necromancer"),
+            classListDropdownData = new List<string> () {
+                "class_mage",
+                "class_paladin",
+                "class_assassin",
+                "class_necromancer"
             };
 
             hintColor = new Color(24, 224, 0);
