@@ -1,0 +1,198 @@
+{
+	"slogan": {
+		"en": "Rise from the void and try to survive!",
+		"it": "Rinasci dall'oscurita' e prova a sopravvivere!",
+		"fr": "Ressuscitez des obscurités et tentez de survivre!",
+		"es": "¡Renace de la oscuridad e intenta sobrevivir!",
+		"de": ""
+	},
+	"startGame": {
+		"en": "Start game",
+		"it": "Inizia",
+		"fr": "Lancer",
+		"es": "Empieza",
+		"de": ""
+	},
+	"options": {
+		"en": "Options",
+		"it": "Opzioni",
+		"fr": "Options",
+		"es": "Opciones",
+		"de": ""
+	},
+	"quit": {
+		"en": "Quit",
+		"it": "Esci",
+		"fr": "Quitter",
+		"es": "Salir",
+		"de": ""
+	},
+	"audio": {
+		"en": "Audio",
+		"it": "Audio",
+		"fr": "Audio",
+		"es": "Audio",
+		"de": ""
+	},
+	"music": {
+		"en": "Music",
+		"it": "Musica",
+		"fr": "Musique",
+		"es": "Música",
+		"de": ""
+	},
+	"back": {
+		"en": "Back",
+		"it": "Indietro",
+		"fr": "Retour(?)",
+		"es": "Atrás",
+		"de": ""
+	},
+	"HINT_no_pg_at_start": {
+		"en": "You need a character in order to play",
+		"it": "Hai bisogno di un personaggio per giocare",
+		"fr": "Vous avez besoin d'un personnage pour jouer",
+		"es": "Necistas un personaje para jugar",
+		"de": ""
+	},
+	"character_info": {
+		"en": "Character's infos",
+		"it": "Info personaggio",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"name": {
+		"en": "Name",
+		"it": "Nome",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"server_list": {
+		"en": "Server list",
+		"it": "Lista server",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"new_character": {
+		"en": "New character",
+		"it": "Crea personaggio",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"load_character": {
+		"en": "Load character",
+		"it": "Carica personaggio",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"delete_character": {
+		"en": "Delete Character",
+		"it": "Cancella personaggio",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"create_new_character": {
+		"en": "Create a new character",
+		"it": "Crea un nuovo personaggio",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"class": {
+		"en": "Class",
+		"it": "Classe",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"create_new_character_button": {
+		"en": "Create character",
+		"it": "Crea personaggio",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"cancel": {
+		"en": "Cancel",
+		"it": "Annulla",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"select_the_class": {
+		"en": "Select a race",
+		"it": "Scegli la classe",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"class_mage": {
+		"en": "Mage",
+		"it": "Mago",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"class_paladin": {
+		"en": "Paladin",
+		"it": "Paladino",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"class_assassin": {
+		"en": "Assassin",
+		"it": "Assassino",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"class_necromancer": {
+		"en": "Necromancer",
+		"it": "Necromante",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"class_mage_desc": {
+		"en": "Mages are powerful creatures who can employ a variety of different spells, ranging from manipulation of the natural elements to physical healing.",
+		"it": "I maghi sono forti creature che utilizzano diverse abilita', dalla manipolazione degli elementi naturali alla cura",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"class_paladin_desc": {
+		"en": "Paladins have no fear on facing death. With their heavy equipment they always stand in the first line",
+		"it": "I paladini non hanno paura della morte. Con il loro equipaggiamento pesante sono sempre in prima linea",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"class_assassin_desc": {
+		"en": "Assassins are fast fighters that use light weapons to kill their targets",
+		"it": "Gli assassini sono combattenti veloci che usano armi leggere per assassinare i loro obiettivi",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"class_necromancer_desc": {
+		"en": "Guided from the death's God, necromancers use their black magic to summon allies that fight along them",
+		"it": "Guidati dal Dio della morte, i necromanti usano la loro magia nera per evocare alleati che combatto al loro fianco",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"invalid_name": {
+		"en": "Invalid name",
+		"it": "Nome non valido",
+		"fr": "",
+		"es": "",
+		"de": ""
+	}
+}

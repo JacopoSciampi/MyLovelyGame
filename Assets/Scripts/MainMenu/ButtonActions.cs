@@ -5,7 +5,7 @@ public class ButtonActions : MonoBehaviour
 {
     public void startGame()
     {
-        SceneManager.LoadScene("GameScene");
+        SceneManager.LoadScene("StartGameScene");
     }
 
     public void QuitGame()
