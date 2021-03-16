@@ -4690,6 +4690,9 @@ MonoBehaviour:
   CharacterNameText: {fileID: 1637605535}
   ClassDescriptionText: {fileID: 933853972}
   createNewCharacterFooterErrorMessage: {fileID: 1569088961}
+  characterNameText: {fileID: 1605747278}
+  characterClassText: {fileID: 1220476881}
+  footerMessageText: {fileID: 92981865}
 --- !u!1 &1469665984
 GameObject:
   m_ObjectHideFlags: 0

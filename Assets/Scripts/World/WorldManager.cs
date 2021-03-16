@@ -2,7 +2,6 @@
 using UnityEngine.UI;
 using TMPro;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
 
 public static class WorldManager
@@ -24,10 +23,11 @@ public static class WorldManager
     public static Color hintColor;
 
     public static string language;
-
-    private static Dictionary<string, TranslationDictionary> translations;
     public static List<string> classListDropdownData;
+    public static CharacterSavedData currentCharactedSelected;
+
     private static bool hasBeenInit;
+    private static Dictionary<string, TranslationDictionary> translations;
 
     public static void __INIT__()
     {
@@ -40,7 +40,7 @@ public static class WorldManager
                 language = "it";
             }
 
-            classListDropdownData = new List<string> () {
+            classListDropdownData = new List<string>() {
                 "class_mage",
                 "class_paladin",
                 "class_assassin",
@@ -53,9 +53,14 @@ public static class WorldManager
         }
     }
 
+    public static void setCurrentCharactedSelected(CharacterSavedData data)
+    {
+        currentCharactedSelected = data;
+    }
+
     public static string GetTranslation(string key)
     {
-        if(translations == null)
+        if (translations == null)
         {
             _initTranslations();
         }

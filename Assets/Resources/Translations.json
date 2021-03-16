@@ -1,9 +1,9 @@
 {
 	"slogan": {
-		"en": "Rise from the void and try to survive!",
-		"it": "Rinasci dall'oscurita' e prova a sopravvivere!",
-		"fr": "Ressuscitez des obscurités et tentez de survivre!",
-		"es": "¡Renace de la oscuridad e intenta sobrevivir!",
+		"en": "Rise from the void and try to survive",
+		"it": "Rinasci dall'oscurita' e prova a sopravvivere",
+		"fr": "Ressuscitez des obscurités et tentez de survivre",
+		"es": "Renace de la oscuridad e intenta sobrevivir",
 		"de": ""
 	},
 	"startGame": {
@@ -191,6 +191,13 @@
 	"invalid_name": {
 		"en": "Invalid name",
 		"it": "Nome non valido",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"character_already_exists": {
+		"en": "Name already in use",
+		"it": "Nome gia' in uso",
 		"fr": "",
 		"es": "",
 		"de": ""
