@@ -58,146 +58,167 @@
 	"character_info": {
 		"en": "Character's infos",
 		"it": "Info personaggio",
-		"fr": "",
-		"es": "",
+		"fr": "Informations sur le caractère",
+		"es": "Informaciones sobre el personaje",
 		"de": ""
 	},
 	"name": {
 		"en": "Name",
 		"it": "Nome",
-		"fr": "",
-		"es": "",
+		"fr": "Nom",
+		"es": "Nombre",
 		"de": ""
 	},
 	"server_list": {
 		"en": "Server list",
 		"it": "Lista server",
-		"fr": "",
-		"es": "",
+		"fr": "Liste des serveurs",
+		"es": "Listado de servidores",
 		"de": ""
 	},
 	"new_character": {
 		"en": "New character",
 		"it": "Crea personaggio",
-		"fr": "",
-		"es": "",
+		"fr": "Créer du caractère",
+		"es": "Crea personaje",
 		"de": ""
 	},
 	"load_character": {
 		"en": "Load character",
 		"it": "Carica personaggio",
-		"fr": "",
-		"es": "",
+		"fr": "Chargement du caractère",
+		"es": "Carga personaje",
 		"de": ""
 	},
 	"delete_character": {
 		"en": "Delete Character",
 		"it": "Cancella personaggio",
-		"fr": "",
-		"es": "",
+		"fr": "Supprimer le caractère",
+		"es": "Eliminar personaje",
 		"de": ""
 	},
 	"create_new_character": {
 		"en": "Create a new character",
 		"it": "Crea un nuovo personaggio",
-		"fr": "",
-		"es": "",
+		"fr": "Créer un nouveau caractère",
+		"es": "Crear nuevo personaje",
 		"de": ""
 	},
 	"class": {
 		"en": "Class",
 		"it": "Classe",
-		"fr": "",
-		"es": "",
+		"fr": "Classe",
+		"es": "Clase",
 		"de": ""
 	},
 	"create_new_character_button": {
 		"en": "Create character",
 		"it": "Crea personaggio",
-		"fr": "",
-		"es": "",
+		"fr": "Créer du caractère",
+		"es": "Crear personaje",
 		"de": ""
 	},
 	"cancel": {
 		"en": "Cancel",
 		"it": "Annulla",
-		"fr": "",
-		"es": "",
+		"fr": "Annuler",
+		"es": "Anular",
 		"de": ""
 	},
 	"select_the_class": {
 		"en": "Select a race",
 		"it": "Scegli la classe",
-		"fr": "",
-		"es": "",
+		"fr": "Choisir la classe",
+		"es": "Elegir la clase",
 		"de": ""
 	},
 	"class_mage": {
 		"en": "Mage",
 		"it": "Mago",
-		"fr": "",
-		"es": "",
+		"fr": "Magicien",
+		"es": "Mago",
 		"de": ""
 	},
 	"class_paladin": {
 		"en": "Paladin",
 		"it": "Paladino",
-		"fr": "",
-		"es": "",
+		"fr": "Paladin",
+		"es": "Paladín",
 		"de": ""
 	},
 	"class_assassin": {
 		"en": "Assassin",
 		"it": "Assassino",
-		"fr": "",
-		"es": "",
+		"fr": "Assassin",
+		"es": "Asesino",
 		"de": ""
 	},
 	"class_necromancer": {
 		"en": "Necromancer",
 		"it": "Necromante",
-		"fr": "",
-		"es": "",
+		"fr": "Nécromancien",
+		"es": "Nigromante",
 		"de": ""
 	},
 	"class_mage_desc": {
 		"en": "Mages are powerful creatures who can employ a variety of different spells, ranging from manipulation of the natural elements to physical healing.",
 		"it": "I maghi sono forti creature che utilizzano diverse abilita', dalla manipolazione degli elementi naturali alla cura",
-		"fr": "",
-		"es": "",
+		"fr": "Les sorciers sont des créatures fortes qui utilisent une variété de techniques, de la manipulation des éléments naturels à la guérison",
+		"es": "Los magos son potentes creaturas que pueden utilizar una variedad de habilidades, desde la manipulación de los elementos naturales hasta la curación",
 		"de": ""
 	},
 	"class_paladin_desc": {
 		"en": "Paladins have no fear on facing death. With their heavy equipment they always stand in the first line",
 		"it": "I paladini non hanno paura della morte. Con il loro equipaggiamento pesante sono sempre in prima linea",
-		"fr": "",
-		"es": "",
+		"fr": "Les paladins n'ont pas peur de la mort. Avec leur équipement lourd, ils sont toujours en première ligne",
+		"es": "Los paladinos no tienen miedo de la muerte. Con su equipamiento pesado están siempre en la primera línea",
 		"de": ""
 	},
 	"class_assassin_desc": {
 		"en": "Assassins are fast fighters that use light weapons to kill their targets",
 		"it": "Gli assassini sono combattenti veloci che usano armi leggere per assassinare i loro obiettivi",
-		"fr": "",
-		"es": "",
+		"fr": "Les assassins sont des combattants rapides qui utilisent des armes légères pour assassiner leurs victimes",
+		"es": "Los asesinos son luchadores rapidos que utilizan armamientos ligeros para asesinar sus victimas",
 		"de": ""
 	},
 	"class_necromancer_desc": {
 		"en": "Guided from the death's God, necromancers use their black magic to summon allies that fight along them",
 		"it": "Guidati dal Dio della morte, i necromanti usano la loro magia nera per evocare alleati che combatto al loro fianco",
-		"fr": "",
-		"es": "",
+		"fr": "Guidés par le dieu de la mort, les nécromanciens utilisent leur magie noire pour invoquer des alliés afin de combattre à leurs côtés",
+		"es": "Guiados por el Dios de la muerte, los nigromantes utilizan su magia negra para invocar a los aliados que luchan junto a ellos",
 		"de": ""
 	},
 	"invalid_name": {
 		"en": "Invalid name",
 		"it": "Nome non valido",
-		"fr": "",
-		"es": "",
+		"fr": "Nom non valide",
+		"es": "Nombre invalido",
 		"de": ""
 	},
 	"character_already_exists": {
 		"en": "Name already in use",
 		"it": "Nome gia' in uso",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"server_already_exists": {
+		"en": "Name already in use",
+		"it": "Nome gia' in uso",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"create_new_server_modal_header": {
+		"en": "Create a new server",
+		"it": "Crea un nuovo server",
+		"fr": "",
+		"es": "",
+		"de": ""
+	},
+	"create_new_server_button_confirm": {
+		"en": "Create new",
+		"it": "Crea",
 		"fr": "",
 		"es": "",
 		"de": ""

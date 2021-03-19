@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
+using UnityEngine.SceneManagement;
 
 public class StartGameButtonsController : MonoBehaviour
 {
@@ -13,16 +14,25 @@ public class StartGameButtonsController : MonoBehaviour
     public Button loadCharacter;
     public Button undoModalCreateNewCharacter;
     public Button confirmModalCreateNewCharacter;
+    public Button addServerButton;
+    public Button cancelCreateNewServer;
+    public Button confirmCreateNewServer;
+
+    [Header("TO BE REWORKED")]
+    public Button playServerButton;
 
     [Header("**Required GameObjects**")]
     public GameObject modalCreateNewCharacter;
+    public GameObject modalCreateNewServer;
 
     [Header("**Required extra component**")]
     public Texture2D defaultMouseCursor;
     public TMP_Dropdown DropdownClassList;
     public Text CharacterNameText;
+    public Text ServerNameText;
     public TextMeshProUGUI ClassDescriptionText;
     public TextMeshProUGUI createNewCharacterFooterErrorMessage;
+    public TextMeshProUGUI createNewServerFooterErrorMessage;
     public TextMeshProUGUI characterNameText;
     public TextMeshProUGUI characterClassText;
     public TextMeshProUGUI footerMessageText;
@@ -31,6 +41,7 @@ public class StartGameButtonsController : MonoBehaviour
     private string basePath;
     private int classIdSelected;
     private string classNameSelected;
+    private string currentNameCharacterSelected;
     private List<StartGameServerList> serverList { get; set; }
     private List<CharacterSavedData> characterList { get; set; }
 
@@ -49,9 +60,81 @@ public class StartGameButtonsController : MonoBehaviour
         DropdownClassList.onValueChanged.AddListener(delegate { _onDropdownClassListValueChanged(DropdownClassList.value); });
 
         _readConfigFile();
+
+        addServerButton.onClick.AddListener(delegate { OnAddServerButtonClicked(); });
+        confirmCreateNewServer.onClick.AddListener(delegate { onCofirmCreateNewServer(); });
+        cancelCreateNewServer.onClick.AddListener(delegate { onCancelCreateNewServer(); });
+
+        playServerButton.onClick.AddListener(delegate { onPlayServerButtonToFix(); });
     }
 
-    private void _readConfigFile()
+    private void onPlayServerButtonToFix()
+    {
+        SceneManager.LoadScene("GameScene");
+    }
+
+    private void onCofirmCreateNewServer()
+    {
+        createNewServerFooterErrorMessage.text = "";
+        string fileName = basePath + "/SavedData/Servers/" + ServerNameText.text + ".umx";
+
+        if (ServerNameText.text.Length < 5)
+        {
+            createNewServerFooterErrorMessage.text = WorldManager.GetTranslation("invalid_name");
+        }
+        else if (File.Exists(fileName))
+        {
+            createNewServerFooterErrorMessage.text = WorldManager.GetTranslation("server_already_exists");
+        }
+        else
+        {
+            // Save server
+            StartGameServerList dataToStore = new StartGameServerList(null);
+            dataToStore.serverName = ServerNameText.text;
+            dataToStore.characterList = new List<CharacterSavedData>();
+            dataToStore.characterInfoList = new List<StartGameServerCharacterInfo>();
+
+            BinaryFormatter formatter = new BinaryFormatter();
+            FileStream stream = new FileStream(fileName, FileMode.Create);
+
+            formatter.Serialize(stream, dataToStore);
+            stream.Close();
+
+            WorldManager.setCurrentServerSelected(dataToStore);
+
+            // Update default player selected when entering this scene
+            // server list. add -> characterList.Add(dataToStore);
+            serverList.Add(dataToStore);
+
+            formatter = new BinaryFormatter();
+            stream = new FileStream(pathStartGameConfigUmx, FileMode.Create);
+
+            StartGameSavedDataList dataToSave = new StartGameSavedDataList(null);
+            dataToSave.characterList = characterList;
+            dataToSave.serverList = serverList;
+            dataToSave.currentPlayerName = currentNameCharacterSelected;
+
+            formatter.Serialize(stream, dataToSave);
+            stream.Close();
+
+            //Update UI
+            _setupUiByData(dataToSave);
+            onCancelCreateNewServer();
+        }
+    }
+
+    private void OnAddServerButtonClicked()
+    {
+        modalCreateNewServer.SetActive(true);
+    }
+
+    private void onCancelCreateNewServer()
+    {
+        modalCreateNewServer.SetActive(false);
+        Cursor.SetCursor(defaultMouseCursor, Vector2.zero, CursorMode.ForceSoftware);
+    }
+
+        private void _readConfigFile()
     {
         if (File.Exists(pathStartGameConfigUmx))
         {
@@ -76,6 +159,7 @@ public class StartGameButtonsController : MonoBehaviour
         if (data.serverList != null)
         {
             serverList = data.serverList;
+            //_populateScrollViewServerList();
         }
         if (data.characterList != null)
         {
@@ -95,6 +179,7 @@ public class StartGameButtonsController : MonoBehaviour
 
             CharacterSavedData storedData = formatter.Deserialize(stream) as CharacterSavedData;
 
+            currentNameCharacterSelected = storedData.name;
             characterNameText.text = storedData.name;
             characterClassText.text = WorldManager.GetTranslation(storedData.className);
         }
@@ -140,6 +225,7 @@ public class StartGameButtonsController : MonoBehaviour
             dataToSave.serverList = serverList;
             dataToSave.currentPlayerName = dataToStore.name;
 
+            currentNameCharacterSelected = dataToStore.name;
             formatter.Serialize(stream, dataToSave);
             stream.Close();
 

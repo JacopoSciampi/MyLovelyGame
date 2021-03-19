@@ -25,6 +25,7 @@ public static class WorldManager
     public static string language;
     public static List<string> classListDropdownData;
     public static CharacterSavedData currentCharactedSelected;
+    public static StartGameServerList currentServerSelected;
 
     private static bool hasBeenInit;
     private static Dictionary<string, TranslationDictionary> translations;
@@ -56,6 +57,11 @@ public static class WorldManager
     public static void setCurrentCharactedSelected(CharacterSavedData data)
     {
         currentCharactedSelected = data;
+    }
+
+    public static void setCurrentServerSelected(StartGameServerList data)
+    {
+        currentServerSelected = data;
     }
 
     public static string GetTranslation(string key)

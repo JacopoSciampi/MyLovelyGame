@@ -28,6 +28,12 @@ public class StartGameTranslationsController : MonoBehaviour
     public TextMeshProUGUI newCreateCharacterButtonText;
     public TextMeshProUGUI newCancelCharacterButtonText;
 
+    [Header("**Create Server Modal**")]
+    public TextMeshProUGUI newServerHeaderText;
+    public TextMeshProUGUI newServerNameText;
+    public TextMeshProUGUI newServerNameUndoButtonText;
+    public TextMeshProUGUI newServerNameConfirmButtonText;
+
     private void _populateClassDropdownData()
     {
         DropdownClassList.options.Clear();
@@ -65,5 +71,11 @@ public class StartGameTranslationsController : MonoBehaviour
         newCancelCharacterButtonText.text = WorldManager.GetTranslation("cancel");
         newCreateCharacterButtonText.text = WorldManager.GetTranslation("create_new_character_button");
 
-    }
+        /** CREATE NEW SERVER MODAL **/
+        newServerHeaderText.text = WorldManager.GetTranslation("create_new_server_modal_header");
+        newServerNameText.text = WorldManager.GetTranslation("name");
+        newServerNameUndoButtonText.text = WorldManager.GetTranslation("cancel");
+        newServerNameConfirmButtonText.text = WorldManager.GetTranslation("create_new_server_button_confirm");
+
+}
 }
