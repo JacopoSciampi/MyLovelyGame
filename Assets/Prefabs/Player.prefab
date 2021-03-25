@@ -219,6 +219,7 @@ MonoBehaviour:
   animator: {fileID: 2607580363298990012}
   movementSpeed: 5
   controller: {fileID: 5440929739112720481}
+  isGrounded: 0
 --- !u!114 &1094693390975897813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,7 +301,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &7968603655068446786
 Transform:
   m_ObjectHideFlags: 0
@@ -308,8 +309,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9127694743992270372}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -0.75}
+  m_LocalRotation: {x: 0.16018227, y: 0.00000008940697, z: -0.000000007450581, w: 0.9870875}
+  m_LocalPosition: {x: 0.1800371, y: 3, z: -8.934561}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6535739666409985731}
@@ -337,10 +338,10 @@ MonoBehaviour:
   m_LookAt: {fileID: 2607580363289954356}
   m_Follow: {fileID: 2607580363289954356}
   m_Lens:
-    FieldOfView: 40
+    FieldOfView: 28
     OrthographicSize: 10
-    NearClipPlane: 0.1
-    FarClipPlane: 5000
+    NearClipPlane: 0.001
+    FarClipPlane: 100
     Dutch: 0
     LensShift: {x: 0, y: 0}
   m_Transitions:
@@ -365,7 +366,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 513
   m_IgnoreTag: Untagged
   m_TransparentLayers:
     serializedVersion: 2
@@ -373,13 +374,13 @@ MonoBehaviour:
   m_MinimumDistanceFromTarget: 0.1
   m_AvoidObstacles: 1
   m_DistanceLimit: 0
-  m_MinimumOcclusionTime: 0
+  m_MinimumOcclusionTime: 4.03
   m_CameraRadius: 0.1
-  m_Strategy: 1
+  m_Strategy: 0
   m_MaximumEffort: 4
   m_SmoothingTime: 0
   m_Damping: 0
-  m_DampingWhenOccluded: 0
+  m_DampingWhenOccluded: 1.71
   m_OptimalTargetDistance: 0
 --- !u!1001 &8241055882695704843
 PrefabInstance:
