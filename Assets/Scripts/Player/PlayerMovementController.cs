@@ -9,10 +9,13 @@ public class PlayerMovementController : NetworkBehaviour
     [SerializeField] private float movementSpeed;
     [SerializeField] private CharacterController controller = null;
 
-    private Vector2 previousInput;
     private Controls controls;
     private bool running;
     private bool isMovingBackward;
+    public bool isGrounded;
+    private float gravityValue = -20.81f;
+    private float jumpHeight = 8.0f;
+    private Vector3 moveDirection = Vector3.zero;
     private Controls Controls
     {
         get
@@ -25,8 +28,6 @@ public class PlayerMovementController : NetworkBehaviour
     public override void OnStartAuthority()
     {
         enabled = true;
-        Controls.Player.Move.performed += ctx => SetMovement(ctx.ReadValue<Vector2>());
-        Controls.Player.Move.canceled += ctx => ResetMovement();
     }
 
     [ClientCallback]
@@ -37,26 +38,27 @@ public class PlayerMovementController : NetworkBehaviour
     private void Update() => Move();
 
     [Client]
-    private void SetMovement(Vector2 movement) => previousInput = movement;
-
-    [Client]
-    private void ResetMovement() => previousInput = Vector2.zero;
-
-    [Client]
     private void Move()
+    {
+        if (controller.isGrounded)
+        {
+            moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+            moveDirection = transform.TransformDirection(moveDirection);
+            movementSpeed = (running) ? (isMovingBackward) ? 5f : 8f : 5f;
+            moveDirection *= movementSpeed;
+            if (Input.GetButton("Jump"))
+                moveDirection.y = jumpHeight;
+
+        }
+
+        moveDirection.y += gravityValue * Time.deltaTime;
+        controller.Move(moveDirection * Time.deltaTime);
+    }
+
+    private void FixedUpdate()
     {
         CheckMovementAnimationToSend();
         CheckAttackAnimationToSend();
-
-        movementSpeed = (running) ? (isMovingBackward) ? 5f : 8f : 5f;
-
-        Vector3 right = controller.transform.right;
-        Vector3 forward = controller.transform.forward;
-        right.y = 0f;
-        forward.y = 0f;
-
-        Vector3 movement = right.normalized * previousInput.x + forward.normalized * previousInput.y;
-        controller.Move(movement * movementSpeed * Time.deltaTime);
     }
 
     private void CheckAttackAnimationToSend()
