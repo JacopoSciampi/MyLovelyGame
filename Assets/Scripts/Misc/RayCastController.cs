@@ -14,12 +14,13 @@ public class RayCastController : MonoBehaviour
         {
             if (WorldManager.isTooltipActive == false)
             {
-                ItemRaycastableController item = hit.transform.gameObject.GetComponent<ItemRaycastableController>();
+                respawnable item = hit.transform.gameObject.GetComponent<respawnable>();
+                item.onItemDesotryed();
 
-                if (item != null && item.showInteractTooltip)
-                {
-                    WorldManager.setTooltip(item.tooltipText);
-                }
+                //if (item != null && item.showInteractTooltip)
+                //{
+                //    WorldManager.setTooltip(item.tooltipText);
+                //}
             }
         }
         else
