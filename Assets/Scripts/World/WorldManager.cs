@@ -26,6 +26,7 @@ public static class WorldManager
     public static List<string> classListDropdownData;
     public static CharacterSavedData currentCharactedSelected;
     public static StartGameServerList currentServerSelected;
+    public static ItemController playerItem { get; set; }
 
     private static bool hasBeenInit;
     private static Dictionary<string, TranslationDictionary> translations;

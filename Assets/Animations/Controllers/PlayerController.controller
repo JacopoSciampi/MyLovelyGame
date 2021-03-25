@@ -156,7 +156,7 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: mouseClicked
     m_EventTreshold: 0
-  - m_ConditionMode: 1
+  - m_ConditionMode: 2
     m_ConditionEvent: hasValidItemInHand
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
@@ -794,7 +794,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LeftMouseClicked
+  m_Name: LeftMouseClicked | hands
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -808,7 +808,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: 2b7a6cdff5c767b43a5a4d6f56ff3089, type: 2}
+  m_Motion: {fileID: 7400000, guid: 8a00d32bef2ed474594bcb5dcf2904bd, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

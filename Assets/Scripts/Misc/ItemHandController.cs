@@ -5,14 +5,16 @@ public class ItemHandController : MonoBehaviour
     [Header("Required")]
     public LayerMask layer;
 
-    private float nextRayCheckTime = 1f;
+    private float nextRayCheckTime = 2f;
+    private float lastCheckedTime;
+    private void Awake()
+    {
+        lastCheckedTime = Time.time;
+    }
 
     void FixedUpdate()
     {
-        if(WorldManager.hasValidItemInHand)
-        {
-            CheckIfItemHasCollided();
-        }
+        CheckIfItemHasCollided();
     }
 
     private void CheckIfItemHasCollided()
@@ -20,13 +22,13 @@ public class ItemHandController : MonoBehaviour
         Ray ray = new Ray(this.transform.position, this.transform.forward);
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, 80) && Time.time > nextRayCheckTime)
+        if (Physics.Raycast(ray, out hit, 80))
         {
+            WorldObjectController item = hit.transform.gameObject.GetComponent<WorldObjectController>();
 
-            ItemRaycastableController item = hit.transform.gameObject.GetComponent<ItemRaycastableController>();
-
-            if (item != null)
+            if (item != null && Time.time > (lastCheckedTime + nextRayCheckTime))
             {
+                lastCheckedTime = Time.time;
                 Debug.Log(item.name);
             }
         }

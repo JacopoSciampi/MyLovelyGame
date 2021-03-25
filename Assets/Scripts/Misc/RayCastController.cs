@@ -14,8 +14,8 @@ public class RayCastController : MonoBehaviour
         {
             if (WorldManager.isTooltipActive == false)
             {
-                respawnable item = hit.transform.gameObject.GetComponent<respawnable>();
-                item.onItemDesotryed();
+                //WorldObjectController item = hit.transform.gameObject.GetComponent<WorldObjectController>();
+                //item.onItemDesotryed();
 
                 //if (item != null && item.showInteractTooltip)
                 //{
